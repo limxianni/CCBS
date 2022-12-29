@@ -12,6 +12,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
 	rel="stylesheet">
+<link rel="stylesheet" href="css/modal.css">
 <script src="https://kit.fontawesome.com/6f995c3af2.js"
 	crossorigin="anonymous"></script>
 <title>Home Page</title>
@@ -39,44 +40,11 @@ td[colspan='4'] {
 	border-bottom: 3px solid black !important;
 }
 
-.modal-backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	width: 100vw;
-	height: 100vh;
-	background-color: #000;
-	opacity: 0.5;
-	display: none;
-}
-
-.dialog {
-	position: absolute;
-	width: auto;
-	height: auto;
-	background: #fff;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	left: 50%;
-	min-width: 640px;
-	display: none;
-	z-index: 1050;
-}
-
 .button-rows {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
 	align-items: end;
-}
-
-.times-button {
-	background: lightgray;
-	height: 25px;
-	width: 25px;
-	text-align: center;
-	border-radius: 30px;
 }
 
 .snack-title {
@@ -85,10 +53,9 @@ td[colspan='4'] {
 </style>
 </head>
 <body>
-	<div class="modal-backdrop" id="backdrop" onclick="toggleDialog()"></div>
 	<div class="container mt-5" style="color: #BBCFD0;">
-		<button class="btn btn-success font-weight-bold" onclick="toggleDialog()">Add
-			Food and Beverage</button>
+		<button class="btn btn-success font-weight-bold"
+			onclick="toggleDialog('addFoodAndBeverageDialog')">Add Food and Beverage</button>
 		<div class="container mt-5">
 			<table class="table table-border">
 				<tr>
@@ -134,54 +101,5 @@ td[colspan='4'] {
 			</table>
 		</div>
 	</div>
-
-	<div class="dialog" id="addFoodAndBeverageDialog">
-		<div class="container p-5" style="background: white;">
-			<span class="float-right times-button" onclick="closeDialog()"><i
-				class="fas fa-times"></i></span>
-			<p>
-				<b>Package:</b> <span class="py-1 px-4"
-					style="background: lightblue; border-radius: 3px;">Combo</span>
-			</p>
-			<input readonly disabled name="combo" value="Medium Popcorn" /> <br>
-			<br> <input readonly disabled name="food"
-				value="Small Sized Drink" /> <br> <br> <input disabled
-				readonly name="drink" value="Onion Ring" /><br> <br>
-
-			<hr style="height: 3px; background: black;">
-
-			<div class="button-rows">
-				<button class="btn" style="background: lightgray">
-					<b>RM14.90</b>
-				</button>
-
-				<button class="btn btn-info" onclick="closeDialog()">Insert</button>
-			</div>
-		</div>
-	</div>
-
-
-	<script type="text/javascript">
-		function toggleDialog() {
-			var dialog = document.getElementById("addFoodAndBeverageDialog");
-			var backdrop = document.getElementById("backdrop");
-
-			if (dialog.style.display == 'none' || dialog.style.display == "") {
-				dialog.style.display = "block";
-				backdrop.style.display = "block";
-			} else {
-				dialog.style.display = "none";
-				backdrop.style.display = "none";
-			}
-		}
-
-		function closeDialog() {
-			var dialog = document.getElementById("addFoodAndBeverageDialog");
-			var backdrop = document.getElementById("backdrop");
-
-			dialog.style.display = "none";
-			backdrop.style.display = "none";
-		}
-	</script>
 </body>
 </html>
