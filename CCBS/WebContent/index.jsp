@@ -96,6 +96,7 @@
                     <td>Pending</td>
                     <td>21 November 2022</td>
                     <td>
+                    	<button type="button" class="btn btn-info" onclick="toggleDialog('manageSchedulDialog')">Manage</button>
                         <button type="button" class="btn btn-danger">Cancel</button>
                     </td>
                 </tr>
@@ -104,6 +105,7 @@
                     <td>Pending</td>
                     <td>21 November 2022</td>
                     <td>
+                    	<button type="button" class="btn btn-info" onclick="toggleDialog('manageSchedulDialog')">Manage</button>
                         <button type="button" class="btn btn-danger">Cancel</button>
                     </td>
                 </tr>
@@ -112,6 +114,7 @@
                     <td>Pending</td>
                     <td>21 November 2022</td>
                     <td>
+                    	<button type="button" class="btn btn-info" onclick="toggleDialog('manageSchedulDialog')">Manage</button>
                         <button type="button" class="btn btn-danger">Cancel</button>
                     </td>
                 </tr>
@@ -120,6 +123,7 @@
                     <td>Pending</td>
                     <td>21 November 2022</td>
                     <td>
+                    	<button type="button" class="btn btn-info" onclick="toggleDialog('manageSchedulDialog')">Manage</button>
                         <button type="button" class="btn btn-danger">Cancel</button>
                     </td>
                 </tr>
@@ -198,6 +202,10 @@
 	
 	<div class="dialog" id="insertMovieDialog">
 		<jsp:include page="insertMovieModal.jsp"></jsp:include>	
+	</div>
+	
+	<div class="dialog" id="manageSchedulDialog">
+		<jsp:include page="manageSchedulDialog.jsp"></jsp:include>	
 	</div>
 
     <script>

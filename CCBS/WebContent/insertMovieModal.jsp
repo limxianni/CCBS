@@ -12,7 +12,7 @@
 			onclick="closeDialog('insertMovieDialog')"><i
 			class="fas fa-times"></i></span>
 		<h2>
-			<b>Avatar: The Way of Water</b>
+			<b contenteditable="true">Avatar: The Way of Water</b>
 		</h2>
 		<%
 			String[] badges = new String[] { "2000", "PG-13", "311mins" };
@@ -32,43 +32,49 @@
 				<div class="card mt-3">
 					<div class="card-body">
 						<div class="card-title">Price</div>
-						<table class="table table-striped">
-							<tr>
-								<td><b>Deluxe</b></td>
-								<td><input class="form-control form-control-sm"
-									type="number" /></td>
-							</tr>
-							<tr>
-								<td><b>Dual Max</b></td>
-								<td><input class="form-control form-control-sm"
-									type="number" /></td>
-							</tr>
-							<tr>
-								<td><b>3D</b></td>
-								<td><input class="form-control form-control-sm"
-									type="number" /></td>
-							</tr>
-							<tr>
-								<td><b>DA DB</b></td>
-								<td><input class="form-control form-control-sm"
-									type="number" /></td>
-							</tr>
-							<tr>
-								<td><b>Premium</b></td>
-								<td><input class="form-control form-control-sm"
-									type="number" /></td>
-							</tr>
-							<tr>
-								<td><b>Classic</b></td>
-								<td><input class="form-control form-control-sm"
-									type="number" /></td>
-							</tr>
+						<table class="table table-striped table-sm">
+							<thead>
+								<th>Type</th>
+								<th>Price</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b>Deluxe</b></td>
+									<td><input class="form-control form-control-sm"
+										type="number" /></td>
+								</tr>
+								<tr>
+									<td><b>Dual Max</b></td>
+									<td><input class="form-control form-control-sm"
+										type="number" /></td>
+								</tr>
+								<tr>
+									<td><b>3D</b></td>
+									<td><input class="form-control form-control-sm"
+										type="number" /></td>
+								</tr>
+								<tr>
+									<td><b>DA DB</b></td>
+									<td><input class="form-control form-control-sm"
+										type="number" /></td>
+								</tr>
+								<tr>
+									<td><b>Premium</b></td>
+									<td><input class="form-control form-control-sm"
+										type="number" /></td>
+								</tr>
+								<tr>
+									<td><b>Classic</b></td>
+									<td><input class="form-control form-control-sm"
+										type="number" /></td>
+								</tr>
+							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
 			<div class="col-6">
-				<img src="images/SAO-poster.jpeg" style="width: inherit" />
+				<img src="images/SAO-poster.jpeg" style="width: 19vw" />
 			</div>
 		</div>
 
@@ -111,6 +117,8 @@
 								type="text" class="form-control"></textarea></td>
 					</tr>
 				</table>
+
+				<button class="btn btn-success float-right">Insert</button>
 			</div>
 		</div>
 	</div>
