@@ -30,24 +30,6 @@
 			font-family: 'Poppins', sans-serif;
 			font-weight: bold;
 		}
-	
-		.badge-style {
-			border-radius: 30px;
-			padding:2px 10px;
-		}
-		
-		.badge-style.badge-lightblue {
-			background: lightblue;
-		}
-		
-		.badge-style.badge-lime {
-			background: lime;
-		}
-		
-		.badge-style.badge-white {
-			background: #f0f0f0;
-		}
-		
 	</style>
 </head>
 <body>
@@ -211,125 +193,11 @@
     <div id="visible_contents"></div>
     
 	<div class="dialog" id="addFoodAndBeverageDialog">
-		<div class="container p-5" style="background: white;">
-			<span class="float-right times-button" onclick="closeDialog('addFoodAndBeverageDialog')"><i
-				class="fas fa-times"></i></span>
-			<p>
-				<b>Package:</b> <span class="py-1 px-4"
-					style="background: lightblue; border-radius: 3px;">Combo</span>
-			</p>
-			<input readonly disabled name="combo" value="Medium Popcorn" /> <br>
-			<br> <input readonly disabled name="food"
-				value="Small Sized Drink" /> <br> <br> <input disabled
-				readonly name="drink" value="Onion Ring" /><br> <br>
-
-			<hr style="height: 3px; background: black;">
-
-			<div class="button-rows">
-				<button class="btn" style="background: lightgray">
-					<b>RM14.90</b>
-				</button>
-
-				<button class="btn btn-info" onclick="closeDialog('addFoodAndBeverageDialog')">Insert</button>
-			</div>
-		</div>
+		<jsp:include page="addSnackModal.jsp"></jsp:include>
 	</div>
 	
 	<div class="dialog" id="insertMovieDialog">
-		<div class="container p-5" style="background: white;">
-			<span class="float-right times-button" onclick="closeDialog('insertMovieDialog')"><i
-				class="fas fa-times"></i></span>
-			<h2><b>Avatar: The Way of Water</b></h2>
-			<%
-				String[] badges = new String[]{"2000", "PG-13", "311mins"};
-				for(int i=0;i<badges.length;i++){
-					out.println("<small><span class='badge-style badge-lime'>"+badges[i]+"</span></small>");
-				}
-				
-				String[] tags = new String[]{"Action", "Drama", "Fantastic"};
-				for(int i=0;i<tags.length;i++){
-					out.println("<small><span class='badge-style badge-lightblue'>"+badges[i]+"</span></small>");
-				}
-			%>
-			
-			
-			<div class="row">
-				<div class="col-6">
-					<div class="card mt-3">
-						<div class="card-body">
-							<div class="card-title">Price</div>
-								<table class="table table-striped">
-									<tr>
-										<td><b>Deluxe</b></td>
-										<td><input class="form-control form-control-sm" type="number"/></td>
-									</tr>
-									<tr>
-										<td><b>Dual Max</b></td>
-										<td><input class="form-control form-control-sm" type="number"/></td>
-									</tr>
-									<tr>
-										<td><b>3D</b></td>
-										<td><input class="form-control form-control-sm" type="number"/></td>
-									</tr>
-									<tr>
-										<td><b>DA DB</b></td>
-										<td><input class="form-control form-control-sm" type="number"/></td>
-									</tr>
-									<tr>
-										<td><b>Premium</b></td>
-										<td><input class="form-control form-control-sm" type="number"/></td>
-									</tr>
-									<tr>
-										<td><b>Classic</b></td>
-										<td><input class="form-control form-control-sm" type="number"/></td>
-									</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="col-6">
-					<img src="images/SAO-poster.jpeg" style="width:inherit"/>
-				</div>
-			</div>
-			
-			<div class="card mt-3">
-				<div class="card-body">
-				<div class="card-title">Description</div>
-					<textarea rows="5" class="form-control" type="text" value="Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans."></textarea>
-				</div>
-			</div>
-			
-			<div class="card mt-3">
-				<div class="card-body">
-				<div class="card-title">Casts</div>
-					<table class="table table-striped">
-						<tr>
-							<td><b>Director</b></td>
-							<!-- <td><span class="badge-style badge-white">James Cameron</span></td> -->
-							<td><input value="Rick Jaffa, Shane Salerno, Josh Friedman" class="form-control" type="text"/></td>
-						</tr>
-						<tr>
-							<td><b>Screenplay by</b></td>
-							<!-- <td><span class="badge-style badge-white">James Cameron</span>	<span class="badge-style badge-white">Rick Jaffa</span>	<span class="badge-style badge-white">Amanda Silver</span> <br></td> -->
-							<td><textarea value="Josh Friedman" type="text" class="form-control"></textarea></td>
-						</tr>
-						<tr>
-							<td><b>Story by</b></td>
-							<%-- <td>
-							<% 
-								String[] actors = new String[]{"James Cameron", "Rick Jaffa", "Amanda Silver", "Josh Friedman", "Shane Salerno"};
-								for(int i=0;i<tags.length;i++){
-									out.println("<span class='badge-style badge-white'>"+actors[i]+"</span>");
-								}
-							%>	
-							</td> --%>
-							<td><textarea value="James Cameron, Rick Jaffa, Amanda Silver, Josh Friedman, Shane Salerno" type="text" class="form-control"></textarea></td>
-						</tr>
-					</table>			
-				</div>
-			</div>
-		</div>
-			
+		<jsp:include page="insertMovieModal.jsp"></jsp:include>	
 	</div>
 
     <script>
