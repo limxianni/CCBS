@@ -34,8 +34,8 @@
 .generateSales__btn,
 .movietab__btn,
 #hall__btn {
-  position: absolute;
-  right: 4rem;
+/*   position: absolute;
+  right: 4rem; */
 }
 
 .movietab__posters {
@@ -43,7 +43,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: row;
-  padding-top: 4rem;
+  padding-top: .5rem;
 }
 
 .movietab__poster {
@@ -94,4 +94,15 @@ td {
   align-items: center;
   justify-content: center;
   margin: 3rem 0 3rem 0;
+}
+
+.pictureBox{
+	    margin: 50px;
+    right: 0;
+    background: orange;
+    z-index: 4;
+    position: absolute;
+    height: 45%;
+    width: 40%;
+    top: 10%;
 }
