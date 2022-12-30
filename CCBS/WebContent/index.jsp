@@ -25,13 +25,8 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous" />
 
-<!-- AJAX -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 
 <title>Company Homepage</title>
-
 
 </head>
 <body>
@@ -39,12 +34,6 @@
 	<div class="modal-backdrop" id="backdrop"></div>
 	<div class="company__header">
 		<img src="./images/GSC-Cinema-Logo.png" style="width: 210px;">
-
-		<!--add company jsp-->
-		<a href="#" type="button"
-			class="btn btn-primary font-weight-bold rounded-pill right"> <i
-			class="fas fa-plus"></i> Add Company
-		</a>
 	</div>
 
 	<br>
@@ -195,9 +184,9 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
+					<button type="button" class="btn btn-secondary font-weight-bold rounded-pill"
 						data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-success">Submit</button>
+					<button type="button" class="btn btn-success font-weight-bold rounded-pill">Submit</button>
 				</div>
 			</div>
 		</div>
@@ -270,9 +259,9 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
+					<button type="button" class="btn btn-secondary font-weight-bold rounded-pill"
 						data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-success">Submit</button>
+					<button type="button" class="btn btn-success font-weight-bold rounded-pill">Submit</button>
 				</div>
 			</div>
 		</div>
@@ -343,8 +332,6 @@
 			backdrop.style.display = "none";
 		}
 	</script>
-
-
 
 	<!-- Bootstrap -->
 	<script
