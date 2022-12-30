@@ -27,7 +27,8 @@
 	font-weight: bold;
 }
 
-.btn-info, .btn-danger {
+table.table-border .btn-info, table.table-border .btn-danger, table.table1  .btn-info,
+	table.table1  .btn-danger {
 	padding: 1px 25px;
 	font-weight: bold;
 }
@@ -55,18 +56,19 @@ td[colspan='4'] {
 <body>
 	<div class="container mt-5" style="color: #BBCFD0;">
 		<button class="btn btn-success font-weight-bold"
-			onclick="toggleDialog('addFoodAndBeverageDialog')">Add Food and Beverage</button>
+			onclick="toggleDialog('addFoodAndBeverageDialog')">Add Food
+			and Beverage</button>
 		<div class="container mt-5">
 			<table class="table table-border">
 				<tr>
 					<td colspan="4"><b class="snack-title">Combo</b></td>
 				</tr>
 				<%
-					String[] combo = new String[]{"Signature Popcorn (Small) + 1x Regular Drink/Mineral Water",
+					String[] combo = new String[] { "Signature Popcorn (Small) + 1x Regular Drink/Mineral Water",
 							"Big Depper + 1x Regular Drink / Mineral Water",
 							"Golden Horn Chips (Small) + 1x Regular Drink/ Mineral Water",
-							"5pcs Hot Minis + 1x RegularDrink / Mineral Water"};
-					double[] comboPrice = new double[]{9.9, 9.9, 9.9, 9.9};
+							"5pcs Hot Minis + 1x RegularDrink / Mineral Water" };
+					double[] comboPrice = new double[] { 9.9, 9.9, 9.9, 9.9 };
 					for (int i = 0; i < combo.length; i++) {
 						out.println(String.format("<tr>" + "<td>" + combo[i] + "</td>" + "<td>RM %.2f</td>"
 								+ "<td><button class='btn btn-info'>Edit</button></td>"
@@ -77,8 +79,8 @@ td[colspan='4'] {
 					<td colspan="4"><b class="snack-title">Food</b></td>
 				</tr>
 				<%
-					String[] food = new String[]{"Large Size Onion Ring", "Medium PopCorn", "Medium PopCorn"};
-					double[] foodPrice = new double[]{9.9, 9.9, 9.9};
+					String[] food = new String[] { "Large Size Onion Ring", "Medium PopCorn", "Medium PopCorn" };
+					double[] foodPrice = new double[] { 9.9, 9.9, 9.9 };
 					for (int i = 0; i < food.length; i++) {
 						out.println(String.format("<tr>" + "<td>" + food[i] + "</td>" + "<td>RM %.2f</td>"
 								+ "<td><button class='btn btn-info'>Edit</button></td>"
@@ -89,12 +91,12 @@ td[colspan='4'] {
 					<td colspan="4"><b class="snack-title">Drink</b></td>
 				</tr>
 				<%
-					String[] drink = new String[]{"Sprite", "MountainDew"};
-					double[] drinkPrice = new double[]{4.9, 2.9};
+					String[] drink = new String[] { "Sprite", "MountainDew" };
+					double[] drinkPrice = new double[] { 4.9, 2.9 };
 					for (int i = 0; i < drink.length; i++) {
 						out.println(String.format("<tr>" + "<td>" + drink[i] + "</td>" + "<td>RM %.2f</td>"
-								+ "<td><button class='btn btn-info'>Edit</button></td>"
-								+ "<td><button class='btn btn-danger'>Delete</button></td>" + "</tr>", drinkPrice[i]));
+								+ "<td><button class='btn btn-info'>Edit</button>"
+								+ "<button class='btn btn-danger'>Delete</button></td>" + "</tr>", drinkPrice[i]));
 					}
 				%>
 

@@ -37,7 +37,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="company__header">
         <img src="images/GSC-Cinema-Logo.png" style="width: 210px;"'>
-        <button>Generate Sales Report</button>
+        <a href="salesTablePage.jsp" target="_blank" class="btn btn-info">Generate Sales Report</a>
     </div>
 
     <br> <br>
@@ -75,7 +75,7 @@
 
     <div class="hidden_contents" id="snacktab_desc">
         <h2>Snack</h2>
-        <jsp:include page="snackInside.jsp" />  
+        <jsp:include page="indexSnackTab.jsp" />  
 
     </div>
 

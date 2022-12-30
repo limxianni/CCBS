@@ -7,14 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container p-5" style="background: white;">
+	<form class="container p-5" style="background: white;" action=""
+		method="POST">
 		<span class="float-right times-button"
 			onclick="closeDialog('insertMovieDialog')"><i
 			class="fas fa-times"></i></span>
 		<h2>
-			<b contenteditable="true">Avatar: The Way of Water</b>
+			<b>Insert Movie</b>
 		</h2>
-		<%
+		<%--<%
 			String[] badges = new String[] { "2000", "PG-13", "311mins" };
 			for (int i = 0; i < badges.length; i++) {
 				out.println("<small><span class='badge-style badge-lime'>" + badges[i] + "</span></small>");
@@ -24,10 +25,25 @@
 			for (int i = 0; i < tags.length; i++) {
 				out.println("<small><span class='badge-style badge-lightblue'>" + badges[i] + "</span></small>");
 			}
-		%>
+		%> --%>
 
 
 		<div class="row">
+			<div class="col-6">
+				<div class="card mt-3">
+					<div class="card-body">
+						<label for="formFile" class="form-label">Name </label> <input
+							name="name" placeholder="Enter Movie Name" class="form-control">
+						<label for="formFile" class="form-label mt-3">Description
+						</label>
+						<textarea rows="5" name="tags" class="form-control"
+							placeholder="Enter tags and seperate using coma (,)"></textarea>
+						<!-- <img src="images/SAO-poster.jpeg" style="width: 19vw" /> -->
+						<label for="formFile" class="form-label mt-3">Poster </label> <input
+							class="form-control" type="file" name="formFile">
+					</div>
+				</div>
+			</div>
 			<div class="col-6">
 				<div class="card mt-3">
 					<div class="card-body">
@@ -41,48 +57,37 @@
 								<tr>
 									<td><b>Deluxe</b></td>
 									<td><input class="form-control form-control-sm"
-										type="number" /></td>
+										type="number" name="deluxePrice" /></td>
 								</tr>
 								<tr>
 									<td><b>Dual Max</b></td>
 									<td><input class="form-control form-control-sm"
-										type="number" /></td>
+										type="number" name="dualmaxPrice" /></td>
 								</tr>
 								<tr>
 									<td><b>3D</b></td>
 									<td><input class="form-control form-control-sm"
-										type="number" /></td>
+										type="number" name="3dPrice" /></td>
 								</tr>
 								<tr>
 									<td><b>DA DB</b></td>
 									<td><input class="form-control form-control-sm"
-										type="number" /></td>
+										type="number" name="dadbPrice" /></td>
 								</tr>
 								<tr>
 									<td><b>Premium</b></td>
 									<td><input class="form-control form-control-sm"
-										type="number" /></td>
+										type="number" name="premiumPrice" /></td>
 								</tr>
 								<tr>
 									<td><b>Classic</b></td>
 									<td><input class="form-control form-control-sm"
-										type="number" /></td>
+										type="number" name="classicPrice" /></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
-			</div>
-			<div class="col-6">
-				<img src="images/SAO-poster.jpeg" style="width: 19vw" />
-			</div>
-		</div>
-
-		<div class="card mt-3">
-			<div class="card-body">
-				<div class="card-title">Description</div>
-				<textarea rows="5" class="form-control" type="text"
-					value="Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans."></textarea>
 			</div>
 		</div>
 
@@ -93,14 +98,14 @@
 					<tr>
 						<td><b>Director</b></td>
 						<!-- <td><span class="badge-style badge-white">James Cameron</span></td> -->
-						<td><input value="Rick Jaffa, Shane Salerno, Josh Friedman"
-							class="form-control" type="text" /></td>
+						<td><input class="form-control" type="text" name="director"
+							placeholder="Enter Director" /></td>
 					</tr>
 					<tr>
 						<td><b>Screenplay by</b></td>
 						<!-- <td><span class="badge-style badge-white">James Cameron</span>	<span class="badge-style badge-white">Rick Jaffa</span>	<span class="badge-style badge-white">Amanda Silver</span> <br></td> -->
-						<td><textarea value="Josh Friedman" type="text"
-								class="form-control"></textarea></td>
+						<td><textarea type="text" class="form-control"
+								name="screenplay" placeholder="Enter Screenplay and seperate using coma (,)"></textarea></td>
 					</tr>
 					<tr>
 						<td><b>Story by</b></td>
@@ -112,16 +117,15 @@
 								}
 							%>	
 							</td> --%>
-						<td><textarea
-								value="James Cameron, Rick Jaffa, Amanda Silver, Josh Friedman, Shane Salerno"
-								type="text" class="form-control"></textarea></td>
+						<td><textarea type="text" class="form-control"
+								placeholder="Enter Casts and seperate using coma (,)" name="cast"></textarea></td>
 					</tr>
 				</table>
 
-				<button class="btn btn-success float-right">Insert</button>
+				<button class="btn btn-success float-right" stype="submit">Insert</button>
 			</div>
 		</div>
-	</div>
+	</form>
 
 </body>
 </html>
