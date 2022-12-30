@@ -18,8 +18,8 @@
 </head>
 <body>
 	<div class="container p-5" style="background: white;">
-		<span class="float-right times-button"
-			onclick="closeDialog('manageSchedulDialog')"><i
+		<span class="float-end times-button"
+			onclick="closeDialog('manageSchedulDialog')" style="cursor: pointer;"><i
 			class="fas fa-times"></i></span>
 		<h2>Branch GSC Setia City Hall</h2>
 		<p>Hall 13</p>
