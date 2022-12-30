@@ -8,9 +8,7 @@
 </head>
 <body>
 	<div class="container p-5" style="background: white;">
-		<span class="float-right times-button"
-			onclick="closeDialog('addFoodAndBeverageDialog')"><i
-			class="fas fa-times"></i></span>
+		<span class="float-end times-button" onclick="closeDialog('addFoodAndBeverageDialog')" style="cursor:pointer;"><i class="fas fa-times" aria-hidden="true"></i></span>
 		<p>
 			<b>Package:</b> <span class="py-1 px-4"
 				style="background: lightblue; border-radius: 3px;">Combo</span>
@@ -27,7 +25,7 @@
 				<b>RM14.90</b>
 			</button>
 
-			<button class="btn btn-info"
+			<button class="btn btn-primary font-weight-bold rounded-pill"
 				onclick="closeDialog('addFoodAndBeverageDialog')">Insert</button>
 		</div>
 	</div>
